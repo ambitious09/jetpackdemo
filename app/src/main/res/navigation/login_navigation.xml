@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/welcomeFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.lhh.jetpackdemo.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_login"
+        />
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.lhh.jetpackdemo.WelcomeFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.lhh.jetpackdemo.RigsterFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_rigster" >
+        <argument
+            android:name="Email"
+            android:defaultValue="1213@163.com"
+            app:argType="string"
+            />
+    </fragment>
+
+
+</navigation>

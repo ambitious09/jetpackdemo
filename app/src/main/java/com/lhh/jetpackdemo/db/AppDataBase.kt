@@ -7,14 +7,20 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
+import com.lhh.jetpackdemo.db.dao.FavouriteDao
 import com.lhh.jetpackdemo.db.dao.ShoeDao
+import com.lhh.jetpackdemo.db.dao.UserDao
+import com.lhh.jetpackdemo.db.data.FavouriteShoe
 import com.lhh.jetpackdemo.db.data.Shoe
+import com.lhh.jetpackdemo.db.data.User
 import com.lhh.jetpackdemo.utils.ShoeWork
 
-@Database(entities = [Shoe::class],version = 1,exportSchema = false)
+@Database(entities = [Shoe::class,User::class,FavouriteShoe::class],version = 1,exportSchema = false)
 abstract class AppDataBase:RoomDatabase() {
 
     abstract fun shoeDao(): ShoeDao
+    abstract fun userDao(): UserDao
+    abstract fun favDao(): FavouriteDao
 
     companion object{
         @Volatile

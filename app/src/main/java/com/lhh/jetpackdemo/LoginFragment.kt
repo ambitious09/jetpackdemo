@@ -2,6 +2,7 @@ package com.lhh.jetpackdemo
 
 
 import android.content.Intent
+import android.os.AsyncTask
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -23,6 +24,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        FragmentLoginBinding.inflate()
        val binding: FragmentLoginBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false)
         mLoginModel= LoginModel("","",context!!)
         binding.model=mLoginModel
@@ -43,8 +45,6 @@ class LoginFragment : Fragment() {
 //            val intent = Intent(context,MainActivity::class.java)
 //            context!!.startActivity(intent)
 //        }
-
-
 
 
 

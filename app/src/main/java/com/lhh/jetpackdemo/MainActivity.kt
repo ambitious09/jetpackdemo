@@ -2,6 +2,8 @@ package com.lhh.jetpackdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.SurfaceView
+import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val navController = hostFragment.navController
 
         bottomNavigationItemView.setupWithNavController(navController)
+
 
 
     }
